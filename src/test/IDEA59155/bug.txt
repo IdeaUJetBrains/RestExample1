@@ -1,0 +1,12 @@
+actually no validation is provided for the parameters annotated with @QueryParam or @PathParam annotations.
+
+@QueryParam and @PathParam can only be used on the following Java types:
+
+      All primitive types except char
+      All wrapper classes of primitive types except Character
+      Any class with the static method named valueOf(String) that accepts a single String argument
+      Any class with a constructor that takes a single String as a parameter
+      List<T>, Set<T>, or SortedSet<T>, where T matches the already listed criteria.
+
+
+The same - for @MatrixParam, @HeaderParam, @CookieParam, and @FormParam annotations.
