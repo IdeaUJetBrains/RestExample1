@@ -17,7 +17,7 @@ public class IDEA130052 {
     public void series(@Suspended final AsyncResponse asyncResponse,
                        @QueryParam("q") String queryString) {
 
-     /*   ListenableFuture<List<String>> future = ServiceKeeper.getInstance().service.listMetrics();
+        /*ListenableFuture<List<String>> future = ServiceKeeper.getInstance().service.listMetrics();
         Futures.addCallback(future, new FutureCallback<List<String>>() {
             @Override
             public void onSuccess(List<String> result) {

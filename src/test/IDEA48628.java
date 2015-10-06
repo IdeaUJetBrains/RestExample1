@@ -18,7 +18,7 @@ public class IDEA48628 {
     @GET
     @Produces({"text/plain"})
     @Path("{input2}")
-    public String input(@PathParam("input") String p) {  //Bug. Here should be Warning
+    public String input(@PathParam("input") String p) {  //Bug. Here should be Warning about unresolved references
         return "Class path: /custom/" + myPostfix + " .\nMy path: /custom/" + myPostfix + "/" + p + " .";
     }
 
