@@ -8,6 +8,7 @@ import java.util.SortedSet;
 /**
  * Created by Olga Pavlova on 10/1/2015.
  */
+@Path("test1")
 public class TestDiffTypes {
 
     //==============================================================

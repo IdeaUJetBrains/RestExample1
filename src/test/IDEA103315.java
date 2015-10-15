@@ -1,24 +1,24 @@
 package test;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import sun.security.krb5.internal.AuthContext;
+
+import javax.jws.WebService;
+import javax.ws.rs.*;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
 
 
 @Path("users")
 @Produces("application/json")
 @Consumes("application/x-www-formurlencoded")
-//@WebService
+//@WebService   //<-All works without this annotation Ok. But the User has this annotation not-commented.
 public class IDEA103315 {
-//TODO uncomment (commented, because it is not deployed)
-    /*
-    @Path("/me")
+
+    @Path("/me1")
     @GET
     public String getProfile1(@Context AuthContext authContext) {
         return "bla";
     }
-
-
 
 
     @Path("/me")
@@ -27,15 +27,16 @@ public class IDEA103315 {
         if (authContext.toString() != null) {
             return new UserProfileWrapper(authContext.toString() );
         }
-        throw new WebApplicationException(Status.NOT_FOUND);
+        throw new WebApplicationException(Response.Status.NOT_FOUND);
     }
 
-     class UserProfileWrapper{
+
+    // created for compilation
+     public class UserProfileWrapper{
         private IGameObject ttt;
 
         public UserProfileWrapper(String s) {}
     }
-
      class IGameObject{}
-     */
+
 }

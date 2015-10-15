@@ -6,6 +6,9 @@ import test.IDEA103972;
 import test.IDEA107741_MB_Obsolete;
 import test.IDEA112045.RestClass;
 import test.IDEA114823;
+import test.IDEA142939.AllinOneFile;
+import test.IDEA142939.MyResource;
+import test.IDEA60318.InOneFile;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -27,6 +30,10 @@ public class ConfigRest  extends Application {
         h.add(IDEA107741_MB_Obsolete.class);
         h.add(IDEA103315.class);
         h.add(RestClass.class);
+        h.add(AllinOneFile.class);
+        h.add(MyResource.class);
+        h.add(InOneFile.class);
+        h.add(IDEA103315.class);
         return h;
 
     }
