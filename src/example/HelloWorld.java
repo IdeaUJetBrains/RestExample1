@@ -12,6 +12,22 @@ import javax.ws.rs.core.MediaType;
 public class HelloWorld {
 
     @GET
+    public String getMessageForm() {
+        return "<form action=\"helloOlga/sayHello\" method=\"GET\">\n" +
+                " Name <input id=\"name\" name=\"name\"/> " +
+                "<input type=\"submit\" />\n" +
+                "  </form>";
+    }
+
+    @Path("sayHello")
+    @GET
+    public String doSayHelloWithRequestParam(@QueryParam("name") String name) {
+        return "Hi there " + name;
+    }
+
+
+
+    @GET
     @Path(value="hello")
     public String getMessage1() {
         return "Hello1";
@@ -24,11 +40,7 @@ public class HelloWorld {
 //    }
 
 
-    @Path("sayHello")
-    @GET
-    public String doSayHelloWithRequestParam(@QueryParam("name") String name) {
-        return "Hi there "+name;
-    }
+
 
 
     @GET
@@ -227,4 +239,6 @@ public class HelloWorld {
         server.stop(0);
         System.out.println("Server stopped");
     }*/
+
+
 }

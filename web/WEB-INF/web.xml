@@ -27,6 +27,7 @@
     <servlet-mapping>
         <servlet-name>example.ConfigRest</servlet-name>
         <url-pattern>/</url-pattern>
+        <url-pattern>/Hello1.jsp</url-pattern>
     </servlet-mapping>
 
 

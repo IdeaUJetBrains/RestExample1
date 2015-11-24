@@ -8,9 +8,15 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
-    <title></title>
+    <title>aTa</title>
   </head>
   <body>
-assdasdaqsdasda
+  test
+
+  <form action="helloOlga/sayHello" method="GET">
+    Name <input id="name" name="name"/>
+    <input type="submit" />
+  </form>
+
   </body>
 </html>
