@@ -3,6 +3,7 @@ package example;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import java.util.*;
 
 /**
  * Created by Olga Pavlova on 22/09/2015.
@@ -21,8 +22,9 @@ public class HelloWorld {
 
     @Path("sayHello")
     @GET
-    public String doSayHelloWithRequestParam(@QueryParam("name") String name) {
+    public String doSayHelloWithRequestParam(@QueryParam("name") List<String> name) {
         return "Hi there " + name;
+
     }
 
 

@@ -2,13 +2,14 @@ package example;
 
 
 import test.IDEA103315;
-import test.IDEA103972;
-import test.IDEA107741_MB_Obsolete;
 import test.IDEA112045.RestClass;
 import test.IDEA114823;
 import test.IDEA142939.AllinOneFile;
 import test.IDEA142939.MyResource;
 import test.IDEA60318.InOneFile;
+import test.produceTest.ProducesChild1;
+import test.produceTest.ProducesTest;
+import test.produceTest.ProducesTestChild;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -26,14 +27,17 @@ public class ConfigRest  extends Application {
         HashSet h = new HashSet<Class<?>>();
         h.add(HelloWorld.class);
         h.add(IDEA114823.class);
-        h.add(IDEA103972.class);
-        h.add(IDEA107741_MB_Obsolete.class);
+        //h.add(IDEA103972.class);
+        //h.add(IDEA107741_MB_Obsolete.class);
         h.add(IDEA103315.class);
         h.add(RestClass.class);
         h.add(AllinOneFile.class);
         h.add(MyResource.class);
         h.add(InOneFile.class);
         h.add(IDEA103315.class);
+        h.add(ProducesTestChild.class);
+        h.add(ProducesTest.class);
+        h.add(ProducesChild1.class);
         return h;
 
     }
