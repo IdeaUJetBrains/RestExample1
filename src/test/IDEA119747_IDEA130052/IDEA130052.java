@@ -31,6 +31,7 @@ public class IDEA130052 {
             new ArrayBlockingQueue<AsyncResponse>(5);
     @GET
     public void readMessage(@Suspended final AsyncResponse ar) throws InterruptedException {
+        Object[] s = suspended.toArray();
         suspended.put(ar);
     }
 

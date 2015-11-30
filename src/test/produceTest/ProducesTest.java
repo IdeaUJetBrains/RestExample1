@@ -54,8 +54,8 @@ public class ProducesTest {
 
 
     @GET
-    @Produces(MediaTypeChild.APPLICATION_XML1)
-    @Path("/html5")
+    @Produces()
+    @Path("/html")
     public String post11() {   return htmlstr;  }
 
 
